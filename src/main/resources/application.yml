@@ -1,0 +1,37 @@
+#server
+server:
+  port: 10000
+
+#JDBC
+#spring:
+#  datasource:
+#    driver-class-name: oracle.jdbc.OracleDriver
+#    url: jdbc:oracle:thin:@//localhost:1521/XE
+#    username: hr
+#    password: 1234
+
+# mybatis
+spring:
+  datasource:
+    hikari:
+      driver-class-name: oracle.jdbc.OracleDriver
+      jdbc-url: jdbc:oracle:thin:@//localhost:1521/XE
+      username: hr
+      password: 1234
+  thymeleaf:
+    cache: false
+    suffix: .html
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+    cors:
+      mappings:
+        "/**":
+          allowed-origins: "http://localhost:3000"
+          allowed-methods: "*"
+          allowed-headers: "*"
+          allow-credentials: true
+
+  api:
+    base-url: "https://api.kcisa.kr/openapi/API_CNV_061/request"
+    service-key: "0acc11dd-f7df-4666-a07e-1603c57e2915"
