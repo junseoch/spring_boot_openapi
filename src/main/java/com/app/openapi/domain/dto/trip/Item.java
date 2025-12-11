@@ -17,7 +17,7 @@ import lombok.Data;
 //          "spatialCoverage": "string"
 @Data
 @XmlAccessorType(XmlAccessType.FIELD)
-public class item {
+public class Item {
 
     private String publisher;
     private String creator;
